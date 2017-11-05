@@ -64,8 +64,16 @@ class ApiController {
                     livre.setIsbn(params.isbn)
                 if(params.auteur)
                     livre.setAuteur(params.auteur)
-                if(params.parution)
-                    livre.setParution(params.parution)
+                if(params.parution) {
+                    try {
+                        livre.setParution(params.parution)
+                    }
+                    catch (Exception e) {
+                        println "!date : "+e.toString()
+                        render(status: 400, text: "format date incorrect")
+                        return
+                    }
+                }
                 if(params.biblio&&params.biblio.id) {
                     if(!Bibliothèque.get(params.biblio.id)){
                         render(status: 400, text: "bibliotheque introuvable")
@@ -144,8 +152,15 @@ class ApiController {
                     libInstance.setNom(params.nom)
                 if(params.adr)
                     libInstance.setAdresse(params.adr)
-                if(params.annee)
-                    libInstance.setAnnée(params.annee)
+                if(params.année)
+                    try {
+                        libInstance.setAnnée(params.année.toInteger())
+                    }
+                    catch(Exception e) {
+                        println "!année : "+e.toString()
+                        render(status: 400, text: "année incorrecte")
+                        return
+                    }
                 if (libInstance.save(flush:true)){
                     response.status = 200
                     withFormat{

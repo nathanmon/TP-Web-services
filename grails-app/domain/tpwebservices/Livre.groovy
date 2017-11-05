@@ -12,7 +12,7 @@ class Livre {
     static constraints = {
         nom blank:false
         parution nullable:false
-        isbn null:false
+        isbn blank:false
         auteur blank:false
     }
 
