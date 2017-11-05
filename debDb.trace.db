@@ -1,0 +1,12 @@
+2017-10-09 14:59:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "BIBLIOTHÈQUE" not found; SQL statement:
+SELECT * FROM bibliothèque [42102-195]
+2017-10-09 15:01:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "BIBLIOTHEQUE" not found; SQL statement:
+SELECT * FROM bibliotheque [42102-195]
+2017-10-09 15:01:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "BIBLIOTHÈQUE" not found; SQL statement:
+SELECT * FROM bibliothèque [42102-195]
+2017-10-09 15:01:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "BIBLIOTHÈQUE" not found; SQL statement:
+SELECT * FROM bibliothèque [42102-195]
